@@ -2,9 +2,6 @@
 
 set timeout 120
 
-spawn "wget http://developer.download.nvidia.com/compute/cuda/4_2/rel/toolkit/cudatoolkit_4.2.9_linux_64_ubuntu11.04.run"
-spawn "wget http://developer.download.nvidia.com/compute/cuda/4_2/rel/sdk/gpucomputingsdk_4.2.9_linux.run"
-
 spawn "./cudatoolkit_4.0.17_linux_64_ubuntu10.10.run"
 
 expect "Enter install path (default /usr/local/cuda, '/cuda' will be appended): "

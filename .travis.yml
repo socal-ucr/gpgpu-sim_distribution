@@ -9,6 +9,8 @@ dist: trusty
 before_install: 
         - sudo apt-get -qq update
         - sudo apt-get install -qq -y gcc g++ gcc-4.6 g++-4.6 make xutils bison flex doxygen python-pmw python-ply python-numpy libpng12-dev python-matplotlib doxygen graphviz git python-pmw python-ply python-numpy libpng12-dev libxi-dev libxmu-dev xutils-dev libc-dev libgl1-mesa-dev wget expect
+        - wget http://developer.download.nvidia.com/compute/cuda/4_2/rel/toolkit/cudatoolkit_4.2.9_linux_64_ubuntu11.04.run
+        - wget http://developer.download.nvidia.com/compute/cuda/4_2/rel/sdk/gpucomputingsdk_4.2.9_linux.run
         - expect cuda.exp
 env: 
         - CUDA_INSTALL_PATH=/usr/local/cuda
