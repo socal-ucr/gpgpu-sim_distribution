@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/socal-ucr/gpgpu-sim_distribution.svg?branch=master)](https://travis-ci.org/socal-ucr/gpgpu-sim_distribution)
+
 Welcome to GPGPU-Sim, a cycle-level simulator modeling contemporary graphics
 processing units (GPUs) running GPU computing workloads written in CUDA or
 OpenCL. Also included in GPGPU-Sim is a performance visualization tool called
