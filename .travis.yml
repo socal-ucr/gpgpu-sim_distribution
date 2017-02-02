@@ -8,9 +8,12 @@ compiler:
 dist: trusty
 before_install: 
         - sudo apt-get -qq update
-        - sudo apt-get install -qq -y gcc g++ gcc-4.6 g++-4.6 make xutils bison flex doxygen python-pmw python-ply python-numpy libpng12-dev python-matplotlib doxygen graphviz git python-pmw python-ply python-numpy libpng12-dev libxi-dev libxmu-dev xutils-dev libc-dev libgl1-mesa-dev nvidia-cuda-toolkit-4.0
+        - sudo apt-get install -qq -y gcc g++ gcc-4.6 g++-4.6 make xutils bison flex doxygen python-pmw python-ply python-numpy libpng12-dev python-matplotlib doxygen graphviz git python-pmw python-ply python-numpy libpng12-dev libxi-dev libxmu-dev xutils-dev libc-dev libgl1-mesa-dev wget expect
+        - wget http://developer.download.nvidia.com/compute/cuda/4_2/rel/toolkit/cudatoolkit_4.2.9_linux_64_ubuntu11.04.run -P ~/.
+        - wget https://gist.githubusercontent.com/Kiran-r/a7ea775e5ddc0474754be3f234c6b5f1/raw/b48b0d2bafd090b303a12fb0d4dca32cbdbddc4c/cuda.exp
+        - expect cuda.exp
 env: 
-        - CUDA_INSTALL_PATH=/usr/
+        - CUDA_INSTALL_PATH=/usr/local/cuda
 language: cpp
 script:
         - source setup_environment
