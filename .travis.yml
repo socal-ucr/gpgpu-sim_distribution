@@ -12,6 +12,8 @@ before_install:
 env: 
         - CUDA_INSTALL_PATH=/usr/
 language: cpp
-script: source ./setup_environment && make
+script:
+        - source setup_environment
+        - make
 after_script:
 - make clean
