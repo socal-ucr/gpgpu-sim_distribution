@@ -4,7 +4,7 @@ RUN apt-get install -y gcc g++ gcc-4.4 g++-4.4 make xutils bison flex doxygen py
 RUN wget http://developer.download.nvidia.com/compute/cuda/4_0/sdk/gpucomputingsdk_4.0.17_linux.run -P ~/.
 RUN wget http://developer.download.nvidia.com/compute/cuda/4_0/toolkit/cudatoolkit_4.0.17_linux_64_ubuntu10.10.run -P ~/.
 RUN wget https://gist.githubusercontent.com/Kiran-r/a7ea775e5ddc0474754be3f234c6b5f1/raw/d7e5f8bb8e2dc7db22680eb50fab27100f8af325/cuda.exp -P ~/.
-RUN chmod 777 ~/gpucomputingsdk_4.0.17_linux.run ~/gpucomputingsdk_4.0.17_linux.run
+RUN chmod 777 ~/gpucomputingsdk_4.0.17_linux.run ~/cudatoolkit_4.0.17_linux_64_ubuntu10.10.run
 RUN echo "export CUDA_INSTALL_PATH=/usr/local/cuda" >> ~/.bashrc
 RUN echo "export NVIDIA_COMPUTE_SDK_LOCATION=~/NVIDIA_GPU_Computing_SDK" >> ~/.bashrc
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 50
