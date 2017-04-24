@@ -7,7 +7,7 @@ RUN wget https://gist.githubusercontent.com/Kiran-r/a7ea775e5ddc0474754be3f234c6
 RUN chmod 777 ~/gpucomputingsdk_4.0.17_linux.run ~/cudatoolkit_4.0.17_linux_64_ubuntu10.10.run
 RUN echo "export CUDA_INSTALL_PATH=/usr/local/cuda" >> ~/.bashrc
 RUN echo "export NVIDIA_COMPUTE_SDK_LOCATION=~/NVIDIA_GPU_Computing_SDK" >> ~/.bashrc
-RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 50
+RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.4 50
 RUN git clone https://github.com/socal-ucr/gpgpu-sim_distribution ~/gpgpu-sim_distribution
 RUN git clone https://github.com/socal-ucr/ispass2009-benchmarks ~/ispass2009-benchmarks
 RUN expect ~/cuda.exp
